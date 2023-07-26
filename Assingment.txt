@@ -1,0 +1,33 @@
+
+Q1.Explain what an SSL certificate is and how it works to secure communication over the internet?
+
+=> The SSL is nothing but a digital certificate that provides secure encryption for communication over the internet.it aim to establish a secure connection between a user's web browser and a web server which ensures that data transmitted between them remains encrypted and confidential.It was refered to as an extention of http as https which can transfer the information with high security features to secure data leakage by unauthorized party.
+
+Working of SSL
+
+* Encryption: When a user attempts to establish a connection with a website that has an SSL certificate, the web server sends its public key to the user's browser. This key is used to encrypt the data before sending it. The browser generates a random symmetric encryption key, known as the session key, and encrypts it using the server's public key. This encrypted session key is then sent back to the server, After this whoe process the encryption take place with the help of symmetric session key. 
+
+* Decryption: The web server receives the encrypted session key and uses its private key (which remains secret and secure) to decrypt the session key. Once decrypted, the server and the user's browser can both use the session key to encrypt and decrypt data during the current session. This symmetric encryption ensures that the data transmitted between them remains confidential and secure.
+
+* Authentication: The SSL plays an important role in authenticating the website infomation from CA (CERTIFICATE AUTHORITY)where they issued there SSL,Before establishing the connection the browser first verify/validate the CA root certificate installed on user device.The conneftion will get to refuse if it found invalidation of the certificate.
+
+Q2.List the different types of SSL certificates based on validation levels and their use cases?
+
+=> SSL can be categorized based on the level of validaion performed by CA(Certificate Authority),Three types of categorization are:
+
+1. Domain Validated (DV) SSL Certificates: In the doman validation the CA(cERTIFICATE Authority) issued the certificate based on the validate the ownership of the domain only.This process is usually automated and requires the certificate requester to verify the control and ownership of the website also the applier can can request the DNS Authority to sent an verification mail to the CA(Certificate Authority) to demonstrate the website ownsership.
+
+Use Cases: DV certificates are used for personal websites, blogs, and small business websites where only basic encryption is required. They are quick to obtain and the most affordable option.
+
+2. Organization Validated (OV) SSL Certificates: This certificate conatains good level of encryption technique therefore it requires some additional infomation from DV as the CA also validates the existence and legal identity of the organization. The CA will check the organization's name, address, and other details through official business documents.
+
+Use Cases: OV certificates are commonly used by medium to large-sized businesses, e-commerce websites, and other organizations that want to display their verified identity to build trust with customers. They provide a higher level of assurance than DV certificates.
+
+3. Extended Validation (EV) SSL Certificates: This process takes some may be 2-3 days as it undergoes through very rigorous (a process which taked place with carefully and attentiopn to detail) validation process where the CA performs both domain ownership verification and examination of the requesting organization's legal and operational details.
+This process may also includes manual verification and may involve phone calls or site visits.
+
+Use Cases: EV certificates are utilized by high-profile and sensitive websites, such as financial institutions, e-commerce platforms, and government websites. They provide the highest level of trust and are indicated by a green address bar in most web browsers, displaying the organization's name.
+
+Q3. Define a Certificate Authority (CA) and its function in the SSL certificate issuance process.
+
+=> A certificate authgority is a third party organization involves or responsible for issuing and managing digital certificates, including SSL certificates wheich then used to secure communication over the internet.They are trusted organization over the Internet which use to validate the identity of the individuals,organization or servers.The CA helps the website ownser to protect their sensitive information over the Internet therefore they sign the issued certificate with its digital signature. This digital signature provides a cryptographic proof that the certificate is genuine and has not been tampered.
